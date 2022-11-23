@@ -10,3 +10,9 @@ $ pip install -U pytest
 
 $ python -m pytest test2.py
 
+## Инструкция для test3.py:
+
+$ python -m unittest -v test3.py
+
+## Инструкция для test4.py:
+
