@@ -37,12 +37,6 @@ def test_tf2():
         ('Sasha', [0, 0, 1])]
 
 
-def test_tf3():
-    assert fit_transform('Sasha ', 'Dasha', 'Masha', 'Sasha') == [
-        ('Sasha ', [0, 0, 1]), ('Dasha', [0, 1, 0]), ('Masha', [1, 0, 0]),
-        ('Sasha', [0, 0, 1])]
-
-
 def test_empty():
     assert fit_transform('') == [('', [1])]
 
