@@ -28,8 +28,9 @@ def encode(message: str) -> str:
     '...  --- ...'
     >>> encode('HELLO WORLD') # doctest: +ELLIPSIS
     '...'
-    >>> encode(3) #тест с исключением
-    '...--'
+    >>> encode('Sos') #тест с исключением
+    Traceback (most recent call last):
+    KeyError: 'o'
     """
 
     encoded_signs = [
