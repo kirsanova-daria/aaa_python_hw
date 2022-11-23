@@ -20,3 +20,8 @@ $ python -m pytest test4.py
 
 ## Инструкция для test5.py:
 
+запуск тестов: $ python -m pytest test5.py
+
+coverage в терминале: $ python -m pytest -q test5.py --cov=year
+
+запись coverage в html файл: $ python -m pytest --cov . --cov-report html
