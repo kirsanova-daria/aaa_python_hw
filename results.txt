@@ -1,0 +1,95 @@
+TEST1.PY
+
+$ python -m doctest -v -o NORMALIZE_WHITESPACE test1.py
+Trying:
+    encode('SOS')
+Expecting:
+    '... --- ...'
+ok
+Trying:
+    encode('SOS')
+Expecting:
+    '...  --- ...'
+ok
+Trying:
+    encode('HELLO WORLD') # doctest: +ELLIPSIS
+Expecting:
+    '...'
+ok
+Trying:
+    encode('Sos') #тест с исключением
+Expecting:
+    Traceback (most recent call last):
+    KeyError: 'o'
+ok
+1 items had no tests:
+    issue1
+1 items passed all tests:
+   4 tests in issue1.encode
+4 tests in 2 items.
+4 passed and 0 failed.
+Test passed.
+
+
+TEST2.PY
+
+$ python -m pytest test2.py
+
+============================================== test session starts ==============================================
+platform darwin -- Python 3.10.7, pytest-7.2.0, pluggy-1.0.0
+rootdir: /Users/apple/Desktop/hello python
+collected 3 items                                                                                               
+
+test2.py ...                                                                                              [100%]
+
+=============================================== 3 passed in 0.03s ===============================================
+
+
+TEST3.PY
+
+$ python -m unittest -v test3.py
+test_empty (test3.TestTF) ... ok
+test_exception (test3.TestTF) ... ok
+test_not_in (test3.TestTF) ... ok
+test_tf (test3.TestTF) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+OK
+
+
+TEST4.PY
+
+$ python -m pytest test4.py
+============================================== test session starts ==============================================
+platform darwin -- Python 3.10.7, pytest-7.2.0, pluggy-1.0.0
+rootdir: /Users/apple/Desktop/hello python
+plugins: cov-4.0.0
+collected 4 items                                                                                               
+
+test4.py ….
+4 passed in 0.02s
+
+
+TEST5.PY
+$ python -m pytest test5.py
+
+platform darwin -- Python 3.10.7, pytest-7.2.0, pluggy-1.0.0
+rootdir: /Users/apple/Desktop/hello python
+plugins: cov-4.0.0
+collected 3 items                                                                                               
+
+test5.py ...    
+
+$ python -m pytest -q test5.py --cov=year
+...                                                                                                                    [100%]
+
+---------- coverage: platform darwin, python 3.10.7-final-0 ----------
+Name      Stmts   Miss  Cover
+-----------------------------
+year.py      19      0   100%
+-----------------------------
+TOTAL        19      0   100%
+
+3 passed in 279.92s (0:04:39)
