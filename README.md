@@ -16,3 +16,7 @@ $ python -m unittest -v test3.py
 
 ## Инструкция для test4.py:
 
+$ python -m pytest test4.py
+
+## Инструкция для test5.py:
+
